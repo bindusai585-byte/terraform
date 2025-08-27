@@ -9,3 +9,5 @@ create the ec2 instances in provate subnet in all AZ and attched the provate sub
 step4:
 update the security group rules for inbound(ssh and http) and outbound(all traffic)in public subnet
 update the security group rules for inbound(ssh) and outbound(all) in private subnet
+step5:
+add the elastic ip to the instances in vpc
