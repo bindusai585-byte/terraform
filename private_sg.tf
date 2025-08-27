@@ -11,7 +11,7 @@ module "private_security-group" {
       to_port     = 22
       protocol    = "tcp"
       description = "SSH access"
-      cidr_blocks = "10.0.0.0/16"
+      cidr_blocks = "0.0.0.0/0"
     }
   ]
 
