@@ -6,9 +6,11 @@ module "ec2_instance" {
     depends_on = [ module.vpc ]
 
   instance_type = "t3.micro"
-  key_name      = "user1"
+  key_name      = "ec2key"
   monitoring    = true
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-00ca32bbc84273381"
+  #user_data = file("${path.module}/install_nginx.sh")
+  vpc_security_group_ids = [module.private_security-group.security_group_id]
     #count         = length(var.vpc_private_subnets)
     for_each = toset(["0", "1", "2" ])
     subnet_id = element(module.vpc.private_subnets, tonumber(each.value))
