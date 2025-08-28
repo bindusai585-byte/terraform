@@ -11,3 +11,5 @@ update the security group rules for inbound(ssh and http) and outbound(all traff
 update the security group rules for inbound(ssh) and outbound(all) in private subnet
 step5:
 add the elastic ip to the instances in vpc
+step6:
+Add the provisioner to copy the key to the bastionhost and can do the ssh to the private instance
